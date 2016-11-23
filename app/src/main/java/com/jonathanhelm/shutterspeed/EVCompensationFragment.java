@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.text.InputType;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -26,7 +27,7 @@ public class EVCompensationFragment extends DialogFragment {
         // Create the Aperture Spinner
         final Context myContext = getContext();
         final EditText editText = new EditText(myContext);
-        editText.setInputType(TYPE_NUMBER_FLAG_SIGNED);
+        editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED);
 
 
         // Chain together various setter methods to set the dialog characteristics

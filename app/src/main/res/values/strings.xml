@@ -3,6 +3,7 @@
     <string name="default_shutter_speed">1/2000 s</string>
     <string name="default_film_speed">ISO 400</string>
     <string name="default_aperture">F/2.8</string>
+    <string name="default_ev_compensation">EVC:0</string>
     <string name="default_exposure_value">EV +15</string>
     <string name="film_speed">Film Speed (ISO)</string>
     <string name="aperture">Aperture</string>

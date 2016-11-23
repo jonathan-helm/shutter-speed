@@ -87,9 +87,9 @@ public class ShutterSpeedCalculator {
 
     public String getMeasuredEVStr(){
         if( myMeasuredEV >= 0 )
-            return "+" + Double.toString(myMeasuredEV);
+            return "EV +" + Double.toString(myMeasuredEV);
         else
-            return Double.toString(myMeasuredEV);
+            return "EV " + Double.toString(myMeasuredEV);
     }
 
     public int getMeasuredEV(){

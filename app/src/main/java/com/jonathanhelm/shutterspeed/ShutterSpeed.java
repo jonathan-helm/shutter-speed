@@ -176,8 +176,8 @@ public class ShutterSpeed extends AppCompatActivity implements SensorEventListen
 
     public void updateExposureCompensation( ){
 
-        TextView textView = (TextView) findViewById(R.id.aperture_setting);
-        textView.setText(myShutterSpeedCalculator.getAperture().toString());
+        TextView textView = (TextView) findViewById(R.id.ev_compensation);
+        textView.setText("EVC  :  " + Integer.toString(myShutterSpeedCalculator.getExposureCompensation()));
 
         return;
     }

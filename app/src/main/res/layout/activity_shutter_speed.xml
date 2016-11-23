@@ -38,6 +38,15 @@
         android:textSize="10dp"
         />
     <TextView
+        android:id="@+id/ev_compensation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/default_ev_compensation"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10dp"
+        />
+    <TextView
         android:id="@+id/exposure_value"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -58,12 +67,5 @@
         android:gravity="center"
         android:textSize="80dp"
     />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:ems="10"
-        android:id="@+id/editText" />
 
 </LinearLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Shutter Speed</string>
+    <string name="default_shutter_speed">1/2000 s</string>
+    <string name="default_film_speed">ISO 400</string>
+    <string name="default_aperture">F/2.8</string>
+    <string name="default_exposure_value">EV +15</string>
+    <string name="film_speed">Film Speed (ISO)</string>
+    <string name="aperture">Aperture</string>
+    <string name="enter">Enter</string>
+    <string name="cancel">Cancel</string>
+
+
+    <string-array name="film_speeds">
+        <item name="iso_25">ISO 25</item>
+        <item name="iso_50">ISO 50</item>
+        <item name="iso_100">ISO 100</item>
+        <item name="iso_200">ISO 200</item>
+        <item name="iso_400">ISO 400</item>
+        <item name="iso_800">ISO 800</item>
+        <item name="iso_1600">ISO 1600</item>
+        <item name="iso_3200">ISO 3200</item>
+    </string-array>
+
+
+    <string-array name="apertures">
+        <item name="f_1_4">F/1.4</item>
+        <item name="f_2_0">F/2.0</item>
+        <item name="f_2_8">F/2.8</item>
+        <item name="f_4_0">F/4.0</item>
+        <item name="f_5_6">F/5.6</item>
+        <item name="f_8_0">F.8.0</item>
+        <item name="f_11">F/11.0</item>
+        <item name="f_16">F/16.0</item>
+        <item name="f_22">F/22.0</item>
+        <item name="f_32">F/32.0</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

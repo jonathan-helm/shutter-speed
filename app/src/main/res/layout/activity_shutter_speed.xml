@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/film_speed_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/default_film_speed"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="10dp"
+            />
+    <TextView
+        android:id="@+id/aperture_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/default_aperture"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:id="@+id/exposure_value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/default_exposure_value"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10dp"
+        />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shutter_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/default_shutter_speed"
+        android:gravity="center"
+        android:textSize="80dp"
+    />
+
+</LinearLayout>

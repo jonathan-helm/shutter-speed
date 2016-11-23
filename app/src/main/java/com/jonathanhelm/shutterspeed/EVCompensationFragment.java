@@ -31,7 +31,7 @@ public class EVCompensationFragment extends DialogFragment {
 
 
         // Chain together various setter methods to set the dialog characteristics
-        builder.setMessage(R.string.film_speed)
+        builder.setMessage(R.string.ev_compensation)
                 .setView(editText)
                 .setPositiveButton(R.string.enter, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {

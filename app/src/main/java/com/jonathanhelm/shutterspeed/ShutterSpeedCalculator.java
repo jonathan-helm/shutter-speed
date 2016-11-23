@@ -62,7 +62,8 @@ public class ShutterSpeedCalculator {
         final int shutterSpeedIdx = sunny16ISO400ShutterSpeedIdx
                                         - apertureOffset
                                         + filmspeedOffset
-                                        + exposureValueOffset;
+                                        + exposureValueOffset
+                                        - myExposureCompensation;
 
         myShutterSpeed = shutterSpeeds[shutterSpeedIdx];
         return;
@@ -120,6 +121,7 @@ public class ShutterSpeedCalculator {
 
     public void setExposureCompensation(int newExposureCompensation){
         myExposureCompensation = newExposureCompensation;
+        updateShutterSpeed();
     }
 
 }

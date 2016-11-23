@@ -59,11 +59,18 @@ public class ShutterSpeedCalculator {
         // Increase Aperture index -> Decrease Aperture Size ->  Increase shutter speed -> Decrease shutter speed idx
         // Increase ISO index -> Increase ISO -> Decrease shutter speed -> Increase shutter speed idx
         // Increase EV -> Increase EV index -> Decrease shutter speed -> Increase shutter speed idx
-        final int shutterSpeedIdx = sunny16ISO400ShutterSpeedIdx
+        int shutterSpeedIdx = sunny16ISO400ShutterSpeedIdx
                                         - apertureOffset
                                         + filmspeedOffset
                                         + exposureValueOffset
                                         - myExposureCompensation;
+
+        // Bound shutterSpeedIdx to lookup table range
+        if(shutterSpeedIdx < 0)
+            shutterSpeedIdx = 0;
+
+        else if( shutterSpeedIdx >= shutterSpeeds.length )
+            shutterSpeedIdx = shutterSpeeds.length - 1;
 
         myShutterSpeed = shutterSpeeds[shutterSpeedIdx];
         return;

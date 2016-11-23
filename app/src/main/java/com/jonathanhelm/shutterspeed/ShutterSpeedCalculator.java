@@ -10,6 +10,7 @@ public class ShutterSpeedCalculator {
     private Aperture myAperture;
     private int myMeasuredLightIntensity;
     private int myMeasuredEV;
+    private int myExposureCompensation;
     private String myShutterSpeed;
 
     private final float lumenCutoffLevels[] = {
@@ -36,6 +37,7 @@ public class ShutterSpeedCalculator {
         myFilmSpeed = FilmSpeed.ISO400;
         myAperture = Aperture.F16;
         myMeasuredLightIntensity = 0;
+        myExposureCompensation = 0;
         myMeasuredEV = lightToEV(myMeasuredLightIntensity);
         myShutterSpeed = shutterSpeeds[0];
     }
@@ -111,4 +113,13 @@ public class ShutterSpeedCalculator {
         myAperture = newAperture;
         updateShutterSpeed();
     }
+
+    public int getExposureCompensation(){
+        return myExposureCompensation;
+    }
+
+    public void setExposureCompensation(int newExposureCompensation){
+        myExposureCompensation = newExposureCompensation;
+    }
+
 }

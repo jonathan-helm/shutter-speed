@@ -12,4 +12,9 @@
             ShutterSpeed:showAsAction= "never"
             android:onClick="onApertureSettingClick"/>
 
+    <item   android:id="@+id/ev_compensation"
+        android:title="@string/ev_compensation"
+        ShutterSpeed:showAsAction= "never"
+        android:onClick="onEVCompensationSettingClick"/>
+
 </menu>

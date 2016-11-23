@@ -124,6 +124,12 @@ public class ShutterSpeed extends AppCompatActivity implements SensorEventListen
         return true;
     }
 
+    public boolean onEVCompensationSettingClick(MenuItem item){
+        DialogFragment newFragment = new EVCompensationFragment();
+        newFragment.show(getSupportFragmentManager(), "ev_compensation");
+        return true;
+    }
+
     public void updateFilmSpeed( FilmSpeed newFilmSpeed){
 
         myShutterSpeedCalculator.setFilmSpeed(newFilmSpeed);
@@ -157,6 +163,25 @@ public class ShutterSpeed extends AppCompatActivity implements SensorEventListen
 
         return;
     }
+
+    public void updateExposureCompensation( int newExposureCompensation){
+
+        myShutterSpeedCalculator.setExposureCompensation(newExposureCompensation);
+        updateExposureCompensation();
+
+        TextView textView = (TextView)findViewById(shutter_speed);
+        textView.setText(myShutterSpeedCalculator.getShutterSpeedStr());
+        return;
+    }
+
+    public void updateExposureCompensation( ){
+
+        TextView textView = (TextView) findViewById(R.id.aperture_setting);
+        textView.setText(myShutterSpeedCalculator.getAperture().toString());
+
+        return;
+    }
+
 
     public void updateLightMeasurement( float newLightMeasurement){
 

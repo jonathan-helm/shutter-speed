@@ -6,6 +6,7 @@
     <string name="default_exposure_value">EV +15</string>
     <string name="film_speed">Film Speed (ISO)</string>
     <string name="aperture">Aperture</string>
+    <string name="ev_compensation">EV Compensation</string>
     <string name="enter">Enter</string>
     <string name="cancel">Cancel</string>
 

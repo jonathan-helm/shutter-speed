@@ -13,6 +13,9 @@ public class StateRetentionFragment extends Fragment {
 
     private ShutterSpeedCalculator myShutterSpeedCalculator;
     private final String PREFS_NAME = "ShutterSpeedPreferences";
+    private final String SETTING_FILM_SPEED = "film_speed";
+    private final String SETTING_APERTURE = "aperture";
+    private final String SETTING_EXP_COMP = "exposure_compensation";
 
     // this method is only called once for this fragment
     @Override
@@ -33,8 +36,9 @@ public class StateRetentionFragment extends Fragment {
         SharedPreferences preferences = myActivity.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = preferences.edit();
 
-        editor.putInt("aperture", myShutterSpeedCalculator.getAperture().toInt() );
-        editor.putInt("film_speed", myShutterSpeedCalculator.getFilmSpeed().toInt() );
+        editor.putInt(SETTING_APERTURE, myShutterSpeedCalculator.getAperture().toInt() );
+        editor.putInt(SETTING_FILM_SPEED, myShutterSpeedCalculator.getFilmSpeed().toInt() );
+        editor.putInt(SETTING_EXP_COMP, myShutterSpeedCalculator.getExposureCompensation());
 
         editor.commit();
 
@@ -50,9 +54,11 @@ public class StateRetentionFragment extends Fragment {
             SharedPreferences preferences = myActivity.getSharedPreferences(PREFS_NAME, 0);
 
             myShutterSpeedCalculator.setAperture(
-                    Aperture.toAperture(preferences.getInt("aperture", 0)));
+                    Aperture.toAperture(preferences.getInt(SETTING_APERTURE, 0)));
             myShutterSpeedCalculator.setFilmSpeed(
-                    FilmSpeed.toFilmSpeed(preferences.getInt("film_speed", 0)));
+                    FilmSpeed.toFilmSpeed(preferences.getInt(SETTING_FILM_SPEED, 0)));
+            myShutterSpeedCalculator.setExposureCompensation(
+                    preferences.getInt(SETTING_EXP_COMP, 0));
         }
 
 

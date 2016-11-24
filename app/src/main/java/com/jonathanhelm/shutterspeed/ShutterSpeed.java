@@ -68,6 +68,7 @@ public class ShutterSpeed extends AppCompatActivity implements SensorEventListen
         updateLightMeasurement();
         updateFilmSpeed();
         updateAperture();
+        updateExposureCompensation();
 
     }
 

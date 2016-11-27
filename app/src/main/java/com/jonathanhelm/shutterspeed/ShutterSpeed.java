@@ -11,10 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import static com.jonathanhelm.shutterspeed.R.id.shutter_speed;
@@ -31,8 +28,6 @@ public class ShutterSpeed extends AppCompatActivity implements SensorEventListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shutter_speed);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.app_toolbar);
-        setSupportActionBar(myToolbar);
 
         // Instantiate ShutterSpeedCalculator
         myShutterSpeedCalculator = new ShutterSpeedCalculator();
@@ -105,27 +100,20 @@ public class ShutterSpeed extends AppCompatActivity implements SensorEventListen
         updateLightMeasurement(event.values[0]);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.settings_menu, menu);
-        return true;
-    }
-
-    public boolean onFilmSpeedSettingClick(MenuItem item){
+    public boolean onFilmSpeedSettingClick(View item){
 
         DialogFragment newFragment = new FilmSpeedFragment();
         newFragment.show(getSupportFragmentManager(), "film_speed");
         return true;
     }
 
-    public boolean onApertureSettingClick(MenuItem item){
+    public boolean onApertureSettingClick(View item){
         DialogFragment newFragment = new ApertureFragment();
         newFragment.show(getSupportFragmentManager(), "aperture");
         return true;
     }
 
-    public boolean onEVCompensationSettingClick(MenuItem item){
+    public boolean onEVCompensationSettingClick(View item){
         DialogFragment newFragment = new EVCompensationFragment();
         newFragment.show(getSupportFragmentManager(), "ev_compensation");
         return true;
